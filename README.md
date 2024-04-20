@@ -1,7 +1,3 @@
-Certainly! Here's a description you could use for the GitHub repository for the PCA class that's compatible with both NumPy arrays and Pandas DataFrames:
-
----
-
 ## PCA (Principal Component Analysis)
 
 This repository contains a Python implementation of Principal Component Analysis (PCA) with compatibility for both NumPy arrays and Pandas DataFrames.
