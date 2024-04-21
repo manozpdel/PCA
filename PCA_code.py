@@ -33,4 +33,10 @@ class PCA:
         
         # Project data onto the new feature space
         X = X - self.mean
-        return np.dot(X, self.components)
+        transformed_data = np.dot(X, self.components)
+        
+        # If the input was a DataFrame, return a DataFrame
+        if isinstance(X, pd.DataFrame):
+            return pd.DataFrame(transformed_data, columns=[f'PC{i+1}' for i in range(transformed_data.shape[1])], index=X.index)
+        else:
+            return pd.DataFrame(transformed_data, columns=[f'PC{i+1}' for i in range(transformed_data.shape[1])])
